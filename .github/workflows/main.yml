@@ -1,0 +1,17 @@
+name: CI Test Workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Репозиторийді көшіру
+        uses: actions/checkout@v3
+
+      - name: Python нұсқасын тексеру
+        run: python --version
+
+      - name: Тест мысалы
+        run: echo "✅ GitHub Actions арқылы автоматты тексеріс сәтті өтті!"
